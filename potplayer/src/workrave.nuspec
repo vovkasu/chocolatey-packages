@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if ??? doesn?t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>potplayer</id>
+    <title>PotPlayer</title>
+    <version>1.6</version>
+    <authors>Daum Communications</authors>
+    <owners>Surov Vladimir</owners>
+    <summary>PotPlayer is a media player developed for Windows by Daum Communications.</summary>
+    <description>PotPlayer has several features, including, but not limited to
+	Ability to play and stream most video and audio formats
+	Ability to play incomplete or damaged AVI files (by skipping the damaged frames)
+	Can remember where the user left off in a video and resume
+	Keyboard shortcuts for most tasks, including seeking, volume, zoom, brightness, contrast, and even subtitle resyncing
+	Subtitle support, including SAA and ASS support as well as embedded subtitles in MKV, OGM, MP4, MOV and 3GP files
+	Users can choose different skins for different types of files, make the windows transparent, and hide the window border when playing
+	Video filters, like deinterlacing, video post-processing and noise reduction for customized playback
+	Audio equalizer and lets users adjust the brightness, contrast and hue of the video</description>
+    <projectUrl>http://potplayer.daum.net/</projectUrl>
+    <tags>media player video MKV OGM MP4 MOV 3GP AVI freeware</tags>
+    <copyright></copyright>
+    <licenseUrl>https://en.wikipedia.org/wiki/PotPlayer</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/en/6/6a/PotPlayer_icon.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
