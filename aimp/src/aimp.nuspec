@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if ??? doesn?t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>aimp</id>
+    <title>AIMP</title>
+    <version>3.55.1355</version>
+    <authors>AIMP DevTeam</authors>
+    <owners>Surov Vladimir</owners>
+    <summary>AIMP (Artem Izmaylov Media Player) is a freeware audio player for Windows.</summary>
+    <description>AIMP (Artem Izmaylov Media Player) is a full-featured free music player designed with sound quality and wide, customizable functionality in mind. Over twenty audio formats are supported. This is one of the best music players you can find on the Internet. Audio is processed in 32-bit for crystal-clear sound. The player features a 18-band graphics equalizer with extra built-in sound effects. You can extend the existing functionality adding Input, DSP and Gen plug-ins from Winamp. All local and global hotkeys are customizable. Full Unicode support. You can convert AudioCD to MP3, OGG, WAV or WMA. Similarly, you can grab sound from any audio device on your PC to MP3, OGG, WAV or WMA formats.</description>
+    <projectUrl>http://www.aimp.ru/</projectUrl>
+    <tags>aimp music player radio MP3 WAV WMA OGG</tags>
+    <copyright></copyright>
+    <licenseUrl>https://en.wikipedia.org/wiki/AIMP</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/AIMP3_Logo.png/64px-AIMP3_Logo.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
