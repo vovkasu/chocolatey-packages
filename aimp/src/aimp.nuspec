@@ -13,7 +13,7 @@
     <projectUrl>http://www.aimp.ru/</projectUrl>
     <tags>aimp music player radio MP3 WAV WMA OGG</tags>
     <copyright></copyright>
-    <licenseUrl>https://en.wikipedia.org/wiki/AIMP</licenseUrl>
+    <licenseUrl>http://en.wikipedia.org/wiki/End-user_license_agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/AIMP3_Logo.png/64px-AIMP3_Logo.png</iconUrl>
     <!--<dependencies>
