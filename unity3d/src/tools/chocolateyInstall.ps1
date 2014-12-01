@@ -1,4 +1,4 @@
-﻿$version = "4.5.5";
+﻿$version = "4.6.0";
 $packageName = 'unity3d';
 $installerType = 'exe';
 $url = "http://netstorage.unity3d.com/unity/UnitySetup-$version.exe";

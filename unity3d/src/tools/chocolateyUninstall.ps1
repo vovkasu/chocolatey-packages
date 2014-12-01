@@ -3,7 +3,11 @@ $installerType = 'exe';
 $silentArgs = '/S';
 
 try {
-	$file = (Get-ItemProperty -Path "hklm:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Unity").UninstallString;
+	$hklm = "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Unity";
+	if (Get-ProcessorBits 64) {
+  		$hklm = "hklm:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Unity";
+	}
+	$file = (Get-ItemProperty -Path $hklm).UninstallString;
 	Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -silentArgs $silentArgs -File $file;
   
 	Write-ChocolateySuccess $packageName;
