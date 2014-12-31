@@ -9,13 +9,34 @@
     <authors>AIMP DevTeam</authors>
     <owners>Surov Vladimir</owners>
     <summary>AIMP (Artem Izmaylov Media Player) is a freeware audio player for Windows.</summary>
-    <description>AIMP (Artem Izmaylov Media Player) is a full-featured free music player designed with sound quality and wide, customizable functionality in mind. Over twenty audio formats are supported. This is one of the best music players you can find on the Internet. Audio is processed in 32-bit for crystal-clear sound. The player features a 18-band graphics equalizer with extra built-in sound effects. You can extend the existing functionality adding Input, DSP and Gen plug-ins from Winamp. All local and global hotkeys are customizable. Full Unicode support. You can convert AudioCD to MP3, OGG, WAV or WMA. Similarly, you can grab sound from any audio device on your PC to MP3, OGG, WAV or WMA formats.</description>
+    <description>AIMP (Artem Izmaylov Media Player) is a full-featured free music player designed with sound quality and wide, customizable functionality in mind. Over twenty audio formats are supported.
+
+Multi-format Playback:
+.CDA, .AAC, .AC3, .APE, .DTS, .FLAC, .IT, .MIDI, .MO3, .MOD, .M4A, .M4B, .MP1, .MP2, .MP3, 
+.MPC, .MTM, .OFR, .OGG, .OPUS, .RMI, .S3M, .SPX, .TAK, .TTA, .UMX, .WAV, .WMA, .WV, .XM
+
+Output supports
+DirectSound / ASIO / WASAPI / WASAPI Exclusive
+
+18-band equalizer and built-in sound effects
+Reverb, Flanger, Chorus, Pitch, Tempo, Echo, Speed, Bass, Enhancer, Voice Remover
+
+32-bit audio processing 
+For the best quality!
+
+Work with multiple playlists
+While one plays - you work with another
+
+Internet radio
+Listen internet-radio stations in OGG / WAV / MP3 / AAC / AAC+ formats
+Capture stream to APE, FLAC, OGG, WAV, WV, WMA and MP3 formats
+Capture stream as is for MP3 / AAC / AAC+ formats</description>
     <projectUrl>http://www.aimp.ru/</projectUrl>
     <tags>aimp music player radio MP3 WAV WMA OGG</tags>
     <copyright></copyright>
     <licenseUrl>http://en.wikipedia.org/wiki/End-user_license_agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/AIMP3_Logo.png/64px-AIMP3_Logo.png</iconUrl>
+    <iconUrl>http://3.bp.blogspot.com/-t8xzAOs7YbQ/U4ppFniZjGI/AAAAAAAAD2A/UkAMbEeWCGE/w200/AIM3anthzoblog.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
