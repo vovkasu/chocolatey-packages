@@ -9,7 +9,8 @@
     <authors>Daum Communications</authors>
     <owners>Surov Vladimir</owners>
     <summary>PotPlayer is a media player developed for Windows by Daum Communications.</summary>
-    <description>PotPlayer has several features, including, but not limited to
+    <description>Powerful multimedia player that supports a variety of different video codecs and formats.
+PotPlayer has several features, including, but not limited to
 	Ability to play and stream most video and audio formats
 	Ability to play incomplete or damaged AVI files (by skipping the damaged frames)
 	Can remember where the user left off in a video and resume
@@ -23,7 +24,7 @@
     <copyright></copyright>
     <licenseUrl>https://en.wikipedia.org/wiki/PotPlayer</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://upload.wikimedia.org/wikipedia/en/6/6a/PotPlayer_icon.png</iconUrl>
+    <iconUrl>https://dl.dropboxusercontent.com/u/47623290/PotplayerIcon.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->

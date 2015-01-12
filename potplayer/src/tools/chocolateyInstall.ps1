@@ -1,8 +1,9 @@
-﻿$packageName = 'potplayer' # arbitrary name for the package, used in messages
-$installerType = 'exe' #only one of these: exe, msi, msu
-$url = 'http://get.daum.net/PotPlayer/v2/PotPlayerSetup.exe' # download url
-$url64 = 'http://get.daum.net/PotPlayer64/v2/PotPlayerSetup64.exe' # 64bit URL here or remove - if installer decides, then use $url
-$silentArgs = '/S' # "/s /S /q /Q /quiet /silent /SILENT /VERYSILENT" # try any of these to get the silent installer #msi is always /quiet
-$validExitCodes = @(0) #please insert other valid exit codes here, exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
+﻿$packageName = 'potplayer';
+$installerType = 'exe';
+$url = 'http://get.daum.net/PotPlayer/v2/PotPlayerSetup.exe';
+$url64 = 'http://get.daum.net/PotPlayer64/v2/PotPlayerSetup64.exe';
 
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"  -validExitCodes $validExitCodes
+$silentArgs = '/S';
+$validExitCodes = @(0);
+
+Install-ChocolateyPackage -packageName $packageName -fileType $installerType -silentArgs $silentArgs -url $url -url64bit $url64  -validExitCodes $validExitCodes;
