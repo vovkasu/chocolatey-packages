@@ -3,7 +3,7 @@ $installerType = 'exe';
 $silentArgs = '/S';
 
 try {
-	$hklm = "hklm:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\PotPlayer";
+	$hklm = "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\PotPlayer";
 	if (Get-ProcessorBits 64) {
 	    $hklm = "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\PotPlayer64";
 	}

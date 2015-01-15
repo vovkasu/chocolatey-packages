@@ -10,21 +10,22 @@
     <owners>Surov Vladimir</owners>
     <summary>PotPlayer is a media player developed for Windows by Daum Communications.</summary>
     <description>Powerful multimedia player that supports a variety of different video codecs and formats.
-PotPlayer has several features, including, but not limited to
-	Ability to play and stream most video and audio formats
-	Ability to play incomplete or damaged AVI files (by skipping the damaged frames)
-	Can remember where the user left off in a video and resume
-	Keyboard shortcuts for most tasks, including seeking, volume, zoom, brightness, contrast, and even subtitle resyncing
-	Subtitle support, including SAA and ASS support as well as embedded subtitles in MKV, OGM, MP4, MOV and 3GP files
-	Users can choose different skins for different types of files, make the windows transparent, and hide the window border when playing
-	Video filters, like deinterlacing, video post-processing and noise reduction for customized playback
-	Audio equalizer and lets users adjust the brightness, contrast and hue of the video</description>
+PotPlayer has several features, including, but not limited to:
+
+* Ability to play and stream most video and audio formats
+* Ability to play incomplete or damaged AVI files (by skipping the damaged frames)
+* Can remember where the user left off in a video and resume
+* Keyboard shortcuts for most tasks, including seeking, volume, zoom, brightness, contrast, and even subtitle resyncing
+* Subtitle support, including SAA and ASS support as well as embedded subtitles in MKV, OGM, MP4, MOV and 3GP files
+* Users can choose different skins for different types of files, make the windows transparent, and hide the window border when playing
+* Video filters, like deinterlacing, video post-processing and noise reduction for customized playback
+* Audio equalizer and lets users adjust the brightness, contrast and hue of the video</description>
     <projectUrl>http://potplayer.daum.net/</projectUrl>
     <tags>media player video MKV OGM MP4 MOV 3GP AVI freeware</tags>
     <copyright></copyright>
     <licenseUrl>https://en.wikipedia.org/wiki/PotPlayer</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://dl.dropboxusercontent.com/u/47623290/PotplayerIcon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/TomOne/various/8b722ab5f1cd7840b91a3c451c68498804d70760/potplayer.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
