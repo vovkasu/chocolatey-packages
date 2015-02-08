@@ -1,4 +1,4 @@
-﻿$packageName = 'unity3d';
+﻿$packageName = 'unity';
 $installerType = 'exe';
 $silentArgs = '/S';
 

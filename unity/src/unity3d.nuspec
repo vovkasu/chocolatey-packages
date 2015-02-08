@@ -3,16 +3,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
-    <id>unity3d</id>
+    <id>unity</id>
     <title>Unity</title>
-    <version>4.6.0</version>
+    <version>4.6.2</version>
     <authors>Unity Technologies</authors>
     <owners>Surov Vladimir</owners>
     <summary>Unity is a cross-platform game creation system developed by Unity Technologies, including a game engine and integrated development environment (IDE)</summary>
     <description>Unity is a game development ecosystem: a powerful rendering engine fully integrated with a complete set of intuitive tools and rapid workflows to create interactive 3D and 2D content; easy multiplatform publishing; thousands of quality, ready-made assets in the Asset Store and a knowledge-sharing community.
 For independent developers and studios, Unity’s democratizing ecosystem smashes the time and cost barriers to creating uniquely beautiful games. They are using Unity to build a livelihood doing what they love: creating games that hook and delight players on any platform.</description>
     <projectUrl>http://unity3d.com/</projectUrl>
-    <tags>unity3d gamedev BlackBerry WindowsPhone Windows OSX Linux WebPlayer PlayStation Xbox Wii SDK game engines</tags>
+    <tags>unity3d gamedev BlackBerry WindowsPhone Windows OSX Linux WebPlayer PlayStation Xbox Wii SDK game-engines game-development 3d-engine development-environment Unity Unity3D Unity4</tags>
     <copyright></copyright>
     <licenseUrl>http://unity3d.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
