@@ -3,7 +3,8 @@ $installerType = 'exe';
 $silentArgs = '/S';
 
 try {
-	$hklm = "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Unity";
+	$hklm = "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Unity (32-bit)";
+
 	if (Get-ProcessorBits 64) {
   		$hklm = "hklm:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Unity";
 	}
