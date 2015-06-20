@@ -1,7 +1,8 @@
 ﻿
-$version = '0.3.6';
+$version = '1.2.0';
 $packageName = 'javadecompiler-gui'; # arbitrary name for the package, used in messages
-$url = "http://jd.benow.ca/jd-gui/downloads/jd-gui-${version}.windows.zip"; # download url
+$url = "https://github.com/java-decompiler/jd-gui/releases/download/v1.2.0/jd-gui-windows-1.2.0.zip";
+
 $unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)";
 $shortcutFilePath = "$([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))\Programs\JavaDecompiler.lnk";
 $targetPath = "${unzipLocation}\jd-gui.exe";
