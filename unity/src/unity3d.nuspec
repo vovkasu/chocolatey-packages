@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>unity</id>
     <title>Unity</title>
-    <version>5.0.1</version>
+    <version>5.1.1</version>
     <authors>Unity Technologies</authors>
     <owners>Surov Vladimir</owners>
     <summary>Unity is a cross-platform game creation system developed by Unity Technologies, including a game engine and integrated development environment (IDE)</summary>
@@ -17,9 +17,9 @@ For independent developers and studios, Unity’s democratizing ecosystem smashe
     <licenseUrl>http://unity3d.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://upload.wikimedia.org/wikipedia/ru/thumb/a/a3/Unity_Logo.png/80px-Unity_Logo.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="dotnet3.5" version="3.5.20140403" />
+    </dependencies>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
