@@ -9,7 +9,6 @@
     <summary>JD (Java Decompiler) is a Decompiler for the Java programming language.</summary>
     <description>JD (Java Decompiler) is a Decompiler for the Java programming language.</description>
     <projectUrl>http://jd.benow.ca/</projectUrl>
-    <packageSourceUrl>https://github.com/vovkasu/chocolatey-packages/tree/master/javadecompiler-gui/src</packageSourceUrl>
     <tags>java decompiler gui</tags>
     <copyright>2008-2015 Emmanuel Dupuy</copyright>
     <licenseUrl>http://opensource.org/licenses/GPL-3.0</licenseUrl>
