@@ -1,6 +1,6 @@
 ﻿$packageName = 'aimp';
 $installerType = 'exe';
-$url = 'http://files.programki.net/aimp/cae7750f32cfceb0f8732b3fa2c9a053/aimp_4.00.1678.exe';
+$url = 'http://aimp.su/storage/d36cdde412041f71ff6953cf2ac73ce0/aimp_4.00.1680.exe';
 $validExitCodes = @(0);
 
 $targetPath = $env:ProgramFiles;
