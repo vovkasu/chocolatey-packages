@@ -1,6 +1,6 @@
-﻿$version = "5.3.1";
-$versionName = "5.3.1f1";
-$buildName = "cc9cbbcc37b4";
+﻿$version = "5.3.2";
+$versionName = "5.3.2f1";
+$buildName = "e87ab445ead0";
 $packageName = 'unity';
 $installerType = 'exe';
 $url =      "http://netstorage.unity3d.com/unity/{0}/Windows32EditorInstaller/UnitySetup32-{1}.exe" -f $buildName,$versionName;
