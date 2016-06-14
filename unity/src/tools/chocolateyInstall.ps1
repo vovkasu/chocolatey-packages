@@ -1,10 +1,10 @@
-﻿$version = "5.3.2";
-$versionName = "5.3.2f1";
-$buildName = "e87ab445ead0";
+﻿$version = "5.3.5.1";
+$versionName = "5.3.5f1";
+$buildName = "960ebf59018a";
 $packageName = 'unity';
 $installerType = 'exe';
-$url =      "http://netstorage.unity3d.com/unity/{0}/Windows32EditorInstaller/UnitySetup32-{1}.exe" -f $buildName,$versionName;
-$url64bit = "http://netstorage.unity3d.com/unity/{0}/Windows64EditorInstaller/UnitySetup64-{1}.exe" -f $buildName,$versionName;
+$url =      "http://download.unity3d.com/download_unity/{0}/Windows32EditorInstaller/UnitySetup32-{1}.exe" -f $buildName,$versionName;
+$url64bit = "http://download.unity3d.com/download_unity/{0}/Windows64EditorInstaller/UnitySetup64-{1}.exe" -f $buildName,$versionName;
 $silentArgs = '/S';
 $validExitCodes = @(0);
 
