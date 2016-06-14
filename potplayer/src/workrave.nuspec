@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>potplayer</id>
     <title>PotPlayer</title>
-    <version>1.6</version>
+    <version>1.6.59347</version>
     <authors>Daum Communications</authors>
     <owners>Surov Vladimir</owners>
     <summary>PotPlayer is a media player developed for Windows by Daum Communications.</summary>
