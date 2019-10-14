@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'aimp';
-$url32 = 'http://aimp.su/storage/5a11962272e8dc7777525fd878e95e5d/aimp_4.51.2080.exe';
+$url32 = 'https://www.aimp.ru/?do=download.file&id=4';
           
-$checksum32  = '5a11962272e8dc7777525fd878e95e5d'
+$checksum32  = '82283682e394fd647a85406f5d246efbdac690b3ef4c143c061e3125c18fdc1d'
 
 $silentArgs = "/SILENT /AUTO";
 
@@ -13,7 +13,7 @@ $packageArgs = @{
   fileType               = 'EXE'
   url                    = $url32
   checksum               = $checksum32
-  checksumType           = 'md5'
+  checksumType           = 'sha256'
   silentArgs             = $silentArgs
   validExitCodes         = @(0)
   registryUninstallerKey = $packageName
