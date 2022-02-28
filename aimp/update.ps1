@@ -1,4 +1,21 @@
-$releases = "http://www.aimp.ru/?do=download&os=windows";
+$releases = "https://www.aimp.ru/?do=download&os=windows";
+
+function Get-RedirectedUrl {
+ 
+    Param (
+        [Parameter(Mandatory=$true)]
+        [String]$URL
+    )
+ 
+    $request = [System.Net.WebRequest]::Create($url)
+    $request.AllowAutoRedirect=$false
+    $response=$request.GetResponse()
+ 
+    If ($response.StatusCode -eq "Found")
+    {
+        $response.GetResponseHeader("Location")
+    }
+}
 
 function global:au_GetLatest {
      $download_page = Invoke-WebRequest -Uri $releases;
@@ -8,8 +25,10 @@ function global:au_GetLatest {
      $c.outerHTML -match 'AIMP v(?<version>(\d.)*), build (?<build>\d*)\S';
      $version = "$($Matches.version).$($Matches.build)";
      
-     $a = $html.getElementsByTagName('a') |?{$_.innerText -eq "AIMP.RU"} | select -First 1;
-     $url  = $a.href;
+     $a = $c.getElementsByTagName('a') |?{$_.innerText -like "AIMP*"} | select -First 1;
+     $urlRaw  = $a.href;
+     $url = Get-RedirectedUrl -URL $urlRaw;
+     #$url = "https://www.aimp.ru/?do=download.file&id=5"
 
      $c.outerHTML -match 'SHA256: (?<sha>\w*)<';
      $sha256  = $Matches.sha;

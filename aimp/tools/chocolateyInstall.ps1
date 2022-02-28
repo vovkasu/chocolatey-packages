@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'aimp';
-$url32 = 'https://www.aimp.ru/?do=download.file&id=4';
+$url32 = 'https://aimp.ru/files/windows/builds/aimp_5.02.2365.exe';
           
-$checksum32  = '82283682e394fd647a85406f5d246efbdac690b3ef4c143c061e3125c18fdc1d'
+$checksum32  = '754fa1b5229abb5845418c5fe98cb8fe5378a63ef1137bc36c5ae2bea0cf134d'
 
 $silentArgs = "/SILENT /AUTO";
 
