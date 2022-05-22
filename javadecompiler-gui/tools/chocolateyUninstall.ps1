@@ -1,6 +1,8 @@
+﻿$version = '1.6.6'
+
 $packageArgs = @{
   packageName = 'javadecompiler-gui'
-  zipFileName = 'jd-gui-windows-1.4.0.zip'
+  zipFileName = 'jd-gui-windows-$version.zip'
 }
 
 $menuPrograms = [environment]::GetFolderPath([environment+specialfolder]::Programs)
