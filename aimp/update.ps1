@@ -25,12 +25,13 @@ function global:au_GetLatest {
      $c.outerHTML -match 'AIMP v(?<version>(\d.)*), build (?<build>\d*)\S';
      $version = "$($Matches.version).$($Matches.build)";
      
-     $a = $c.getElementsByTagName('a') |?{$_.innerText -like "AIMP*"} | select -First 1;
+     $d = $html.getElementsByTagName('div') |?{($_.className -eq 'link') -and ($_.innerText.Contains("Windows 32/64-bit - AIMP.ru"))} | select -First 1;
+     $a = $c.getElementsByTagName('a') |?{$_.className -eq "button"} | select -First 1;
      $urlRaw  = $a.href;
      $url = Get-RedirectedUrl -URL $urlRaw;
      #$url = "https://www.aimp.ru/?do=download.file&id=5"
 
-     $c.outerHTML -match 'SHA256: (?<sha>\w*)<';
+     $d.outerHTML -match 'SHA256: (?<sha>\w*)<';
      $sha256  = $Matches.sha;
 
      return @{ Version = $version; URL32 = $url; SHA256 = $sha256 }
