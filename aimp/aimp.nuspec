@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>aimp</id>
     <title>AIMP</title>
-    <version>5.02.2370</version>
+    <version>5.40.2703</version>
     <authors>AIMP DevTeam</authors>
     <owners>Surov Vladimir</owners>
     <summary>AIMP (Artem Izmaylov Media Player) is a freeware audio player for Windows.</summary>
@@ -34,7 +34,7 @@ Capture stream as is for MP3 / AAC / AAC+ formats</description>
     <projectUrl>http://www.aimp.ru/</projectUrl>
     <tags>aimp music player radio MP3 WAV WMA OGG</tags>
     <copyright></copyright>
-    <licenseUrl>http://en.wikipedia.org/wiki/End-user_license_agreement</licenseUrl>
+    <licenseUrl>http://www.aimp.ru/?do=eula&amp;os=windows</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://3.bp.blogspot.com/-t8xzAOs7YbQ/U4ppFniZjGI/AAAAAAAAD2A/UkAMbEeWCGE/w200/AIM3anthzoblog.png</iconUrl>
     <!--<dependencies>
