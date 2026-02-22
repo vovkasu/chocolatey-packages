@@ -7,45 +7,62 @@ function Get-RedirectedUrl {
         [String]$URL
     )
  
-    $request = [System.Net.WebRequest]::Create($url)
-    $request.AllowAutoRedirect=$false
-    $response=$request.GetResponse()
- 
-    If ($response.StatusCode -eq "Found")
-    {
-        $response.GetResponseHeader("Location")
-    }
+    $response = Invoke-WebRequest -Uri $URL -Method Head -MaximumRedirection 5 -UseBasicParsing;
+    $finalUrl = $response.BaseResponse.ResponseUri.AbsoluteUri;
+    return $finalUrl;
 }
 
 function global:au_GetLatest {
-     $download_page = Invoke-WebRequest -Uri $releases;
-     $html = $download_page.ParsedHtml;
+    Install-Module -Name PowerHTML -Force;
 
-     $c = $html.getElementsByTagName('div') |?{$_.className -eq 'card_content'} | select -First 1;
-     $c.outerHTML -match 'AIMP v(?<version>(\d.)*), build (?<build>\d*)\S';
-     $version = "$($Matches.version).$($Matches.build)";
-     
-     $d = $html.getElementsByTagName('div') |?{($_.className -eq 'link') -and ($_.innerText.Contains("Windows 32/64-bit - AIMP.ru"))} | select -First 1;
-     $a = $c.getElementsByTagName('a') |?{$_.className -eq "button"} | select -First 1;
-     $urlRaw  = $a.href;
-     $url = Get-RedirectedUrl -URL $urlRaw;
-     #$url = "https://www.aimp.ru/?do=download.file&id=5"
+    Write-Host "1.Download page $($releases)";
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing;
+    $html = ConvertFrom-Html -Content $response.Content;
 
-     $d.outerHTML -match 'SHA256: (?<sha>\w*)<';
-     $sha256  = $Matches.sha;
+    $mainButton = $html.SelectSingleNode("//a[contains(@class, 'button_download_windows')]")
+    if ($mainButton -and $mainButton.OuterHtml -match 'v(?<version>[\d.]*)') {
+        $version = $Matches.version
+        Write-Host "2.Version: $version"
+    }
+    
+    $container32Bit = $html.SelectNodes("//li[contains(@class, 'link')]") | ? { $_.InnerText -like "*32-bit*" } | Select-Object -First 1;
+    $a32Bit = $container32Bit.SelectSingleNode(".//a[contains(@class, 'link_full')]");
+    $urlRaw  = $a32Bit.Attributes["href"].Value;
+    Write-Host "3.urlRaw 32bit  '$($urlRaw)'";
 
-     return @{ Version = $version; URL32 = $url; SHA256 = $sha256 }
+    $url32 = Get-RedirectedUrl -URL $urlRaw;
+    Write-Host "4.url32 '$($url32)'";
+
+    $container32Bit.outerHTML -match 'SHA256: (?<sha>\w*)<';
+    $sha256  = $Matches.sha;
+    Write-Host "5.sha256 32bit '$($sha256)'";
+
+    $container64Bit = $html.SelectNodes("//li[contains(@class, 'link')]") | ? { $_.InnerText -like "*64-bit*" } | Select-Object -First 1;
+    $a64Bit = $container64Bit.SelectSingleNode(".//a[contains(@class, 'link_full')]");
+    $urlRaw  = $a64Bit.Attributes["href"].Value;
+    Write-Host "6.urlRaw 64bit  '$($urlRaw)'";
+
+    $url64 = Get-RedirectedUrl -URL $urlRaw;
+    Write-Host "7.url64 '$($url64)'";
+
+    $container32Bit.outerHTML -match 'SHA256: (?<sha>\w*)<';
+    $sha256_64  = $Matches.sha;
+    Write-Host "8.sha256 64bit '$($sha256_64)'";
+
+    return @{ Version = $version; URL32 = $url32; SHA256 = $sha256; URL64 = $url64; SHA256_64 = $sha256_64 }
 }
 
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
             "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"           
-            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.SHA256)'"      
+            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"      
+            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"           
+            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"      
         }
     }
 }
 
 rm "*.nupkg";
-update;
-ls *.nupkg | select -First 1 | %{ cpush $_.FullName; }
+update -Force;
+ls *.nupkg | select -First 1 | %{ Push-Package $_.FullName; }
